@@ -1,5 +1,5 @@
 var todos = localStorage.getItem('remember');
-todos = (todos == null) ? [{'id': 'abcdef', 'todo': 'i am god'}] : JSON.parse(todos);
+todos = (todos == null || todos == '[]') ? [{'id': 'abcdef', 'todo': 'i am god'}] : JSON.parse(todos);
 
 class RememberComponent extends React.Component {
 	render() {
@@ -27,13 +27,9 @@ class InputComponent extends React.Component {
 			<div>
 				<div className="row">
 				<form className="form" id="form" onSubmit={this.addTodo}>
-				<div className="form-group col-md-11 col-xs-8">
-			<input type="text" className="form-control" id="input" placeholder="Type a todo" required="true" maxLength="32"/>	
+				<div className="form-group col-md-8 col-md-offset-2">
+					<input type="text" className="form-control" id="input" placeholder="Type a todo" required="true" maxLength="32"/>	
 				</div>
-				<div className="form-group col-md-1 col-xs-4">
-					<button className="btn btn-primary btn-block">ADD</button>
-				</div>
-				
 				</form>
 				</div>
 			</div>
@@ -60,7 +56,7 @@ class NotesComponent extends React.Component {
 class NoteComponent extends React.Component {
 	render() {
 		return (
-			<div className="col-md-12 col-xs-12 todo" id={this.props.id}>
+			<div className="col-md-8 col-md-offset-2 todo" id={this.props.id}>
 				<span>{this.props.todo}</span>
 				<DeleteComponent />
 			</div>
