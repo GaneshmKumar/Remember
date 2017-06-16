@@ -56,7 +56,7 @@ class NotesComponent extends React.Component {
 class NoteComponent extends React.Component {
 	render() {
 		return (
-			<div className="col-md-8 col-md-offset-2 todo" id={this.props.id}>
+			<div className="col-md-8 col-md-offset-2 col-xs-12 todo" id={this.props.id}>
 				<span>{this.props.todo}</span>
 				<DeleteComponent />
 			</div>
