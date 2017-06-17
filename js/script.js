@@ -1,16 +1,5 @@
 var todos = localStorage.getItem('remember');
-todos = (todos == null || todos == '[]') ? [{'id': 'abcdef', 'todo': 'i am god'}] : JSON.parse(todos);
-
-class RememberComponent extends React.Component {
-	render() {
-		return (
-			<div>
-				<InputComponent />
-				<NotesComponent />
-			</div>
-			);
-	}
-}
+todos = (todos == null || todos == '[]') ? [] : JSON.parse(todos);
 
 class InputComponent extends React.Component {
 	addTodo(e) {
@@ -28,7 +17,7 @@ class InputComponent extends React.Component {
 				<div className="row">
 				<form className="form" id="form" onSubmit={this.addTodo}>
 				<div className="form-group col-md-8 col-md-offset-2">
-					<input type="text" className="form-control" id="input" placeholder="Type a todo" required="true" maxLength="32"/>	
+					<input type="text" className="form-control" id="input" placeholder="Type a todo and hit enter" required="true" maxLength="32"/>	
 				</div>
 				</form>
 				</div>
@@ -47,7 +36,9 @@ class NotesComponent extends React.Component {
 	render() {
 		return (
 			<div className="todos row">
-				{this.props.todos}			
+				<div className="col-md-8 col-md-offset-2 col-xs-12">
+					{this.props.todos}		
+				</div>	
 			</div>
 		);
 	}
@@ -56,7 +47,7 @@ class NotesComponent extends React.Component {
 class NoteComponent extends React.Component {
 	render() {
 		return (
-			<div className="col-md-8 col-md-offset-2 col-xs-12 todo" id={this.props.id}>
+			<div className="todo row" id={this.props.id}>
 				<span>{this.props.todo}</span>
 				<DeleteComponent />
 			</div>
@@ -76,11 +67,10 @@ class DeleteComponent extends React.Component {
 			}
 		}
 		updateLocalStorage();
-		
 	}
 	render() {
 		return (
-			<button className="btn btn-danger pull-right" onClick={this.deleteTodo}>Delete</button>
+			<button className="btn pull-right" id="delete" onClick={this.deleteTodo}>x</button>
 		);
 	}
 }

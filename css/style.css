@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Spicy+Rice|Quicksand:700');
+
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn {
+	outline: none !important;
+}
+
+#title span {
+	font-family: 'Quicksand', sans-serif;
+}
+a {
+	color: #fafafa;
+	transition: linear 0.3s;
+}
+
+a:hover {
+	color: #fafafa;
+	text-decoration: none;
+	opacity: 0.8;
+}
+
+body {
+	background: #1A1C1D;
+}
+
+#title {
+	margin-top: 70px;
+	text-align: center;
+	color: #ffffff;
+}
+#title h1 {
+	
+	font-family: 'Luckiest Guy', cursive;
+	font-size: 50px;
+}
+#input {
+	margin-top: 30px;
+	padding: 20px;
+	font-family: 'Spicy Rice', cursive;
+	font-size: 25px;
+	color: #ECEFF1;
+	border-color: #343436;
+	background: #343436;
+	height: 60px !important;
+}
+
+#delete {
+	color: #ff4436;
+}
+
+#delete:hover {
+	cursor: pointer;
+}
+
+.todos{
+	margin: 10px 10px;
+}
+
+.todo {
+	border-radius: 4px;
+	font-size: 20px;
+	color: #ECEFF1;
+	padding: 10px 20px;
+	background: #343436;
+	margin-top: 10px;
+	font-family: 'Quicksand', sans-serif;
+}
+
+.btn {
+	font-size: 12px;
+	font-family: 'Luckiest Guy', cursive;
+	background: #343436;
+}
