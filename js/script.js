@@ -70,7 +70,7 @@ class DeleteComponent extends React.Component {
 	}
 	render() {
 		return (
-			<button className="btn pull-right" id="delete" onClick={this.deleteTodo}>x</button>
+			<button className="btn pull-right delete" onClick={this.deleteTodo}>&#x2718;</button>
 		);
 	}
 }

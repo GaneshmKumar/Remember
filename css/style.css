@@ -49,12 +49,15 @@ body {
 	height: 60px !important;
 }
 
-#delete {
+.delete {
 	color: #ff4436;
+	transition: linear 0.3s;
 }
 
-#delete:hover {
+.delete:hover {
 	cursor: pointer;
+	background: #1A1C1D;
+	color: #ff4436;
 }
 
 .todos{
